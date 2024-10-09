@@ -1,0 +1,515 @@
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --red: hsl(14, 86%, 42%);
+    --rose50: hsl(20, 50%, 98%);
+    --rose100: hsl(13, 31%, 94%);
+    --rose300: hsl(14, 25%, 72%);
+    --rose400: hsl(7, 20%, 60%);
+    --rose500: hsl(12, 20%, 44%);
+    --rose900: hsl(14, 65%, 9%);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    background-color: var(--rose50);
+    display: flex;
+}
+
+hr {
+    margin: 0px;
+}
+
+.container {
+    
+    margin-bottom: 100px;
+}
+
+h1 {
+    font-size: 50px;
+    margin-top: 30px;
+    font-weight: 700;
+    font-family: "Red Hat Text", sans-serif;
+    font-style: normal;
+    margin-bottom: 30px;
+    color: var(--rose900);
+}
+
+/* Desserts */
+.dessert-item-card {
+    position: relative;
+    
+}
+
+.add-cart-btn-container {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dessert-image {
+    border-radius: 15px;
+}
+
+.add-cart-btn {
+    border-radius: 30px;
+    border-color: var(--rose300);
+    padding: 10px 20px 10px 20px;
+    font-weight: 600;
+    font-size: 22px;
+
+    width: 200px;
+    height: 55px;
+}
+
+.quantityContainer {
+    border-radius: 30px;
+    border-color: var(--rose300);
+    padding: 10px 20px 10px 20px;
+    font-weight: 600;
+    font-size: 22px;
+
+    width: 200px;
+    height: 55px;
+    background-color: var(--red);
+    display: none;
+}
+
+.decreaseQuantity {
+    /* display: inline-block; */
+    float: left;
+    border-radius: 50px;
+    border: 1px solid var(--white);
+    background-color: var(--red);
+    padding: 0px 9px 0px 9px;
+    color: var(--white);
+}
+
+.quantityText {
+    display: inline-block;
+    color: var(--white);
+}
+
+.increaseQuantity {
+    /* display: inline-block; */
+    float: right;
+    border-radius: 50px;
+    border: 1px solid var(--white);
+    background-color: var(--red);
+    padding: 0px 7px 0px 7px;
+    color: var(--white);
+}
+
+.decreaseQuantity:hover {
+    border: 1px solid var(--red);
+    background-color: var(--white);
+    color: var(--red);
+}
+
+.increaseQuantity:hover {
+    border: 1px solid var(--red);
+    background-color: var(--white);
+    color: var(--red);
+}
+
+.dessert-details {
+    margin: 0px;
+}
+
+.food-type {
+    color:var(--rose400);
+    font-weight: 400;
+    margin-top: 40px;
+    font-size: 21px;
+}
+
+.food-name {
+    color: var(--rose900);
+    font-weight: 700;
+    font-size: 23px;
+}
+
+.food-price {
+    color: var(--red);;
+    font-weight: 600;
+    font-size: 23px;
+}
+
+.add-cart-btn-container {
+    margin-bottom: 20px;
+
+}
+
+.add-cart-btn:hover {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+/* Cart - sidebar */
+.cart-section-card {
+    border: none;
+    margin-top: 40px;
+}
+
+#empty-cart-image {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#empty-cart-text {
+    color:  var(--rose400);
+    font-weight: 600;
+    font-size: 23px;
+}
+
+.cart-main-title {
+    color: var(--red);
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.cart-name {
+    font-weight: 700;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.cart-quantity {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--red);
+    font-size: 20px;
+}
+
+.cart-price {
+    display: inline-block;
+    margin-left: 20px;
+    color: var(--rose400);
+    font-size: 18px;
+}
+
+.cart-subtotal {
+    display: inline-block;
+    color: var(--rose500);
+    margin-left: 15px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#carbon-neutral-section {
+    display: none;
+    background-color: var(--rose50);
+    padding: 10px 10px;
+    border-radius: 15px;
+}
+
+#order-total-section {
+    display: none;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+#orders-total-text {
+    font-size: 20px;
+    display: inline;
+}
+#orders-total-amount {
+    font-size: 35px;
+    font-weight: 700;
+    display: inline;
+    float: right;
+}
+
+.carbon-neutral-items {
+    display: inline-block;
+}
+
+#confirm-order-btn {
+    border-radius: 25px;
+    display: none;
+    background-color: var(--red);
+    color: var(--white);
+    font-weight: 600;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+
+#confirm-order-btn:hover {
+    background-color: var(--rose900);
+}
+
+
+/* Modal */
+.modal-body {
+    padding: 30px;
+}
+
+#modal-image {
+    width: 30px;
+}
+
+#modal-title {
+    font-weight: 700;
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#modal-subtitle {
+    color: var(--rose500);
+}
+
+.confirmation-modal-bg {
+    background-color: var(--rose100);
+    padding: 10px 20px 10px 20px;
+}
+
+.confirmation-total-bg {
+    background-color: var(--rose100);
+    padding: 10px 20px 10px 20px;
+}
+
+#confirmation-total-text {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+#confirmation-grand-total {
+    float: right;
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 0px
+}
+
+#confirmation-amount {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#confirmation-image {
+   width: 80px;
+}
+
+.cart-item-line {
+    padding-top: 10px;
+}
+
+.cart-name {
+    margin-top: 0px;
+}
+
+.cart-subtotal {
+    float: right;
+}
+
+#btn-start-new-order {
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 50px;
+    margin-top: 20px;
+    font-weight: 600;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 50px;
+        margin-top: 100px;
+        font-weight: 700;
+        font-style: normal;
+        margin-bottom: 30px;
+    }
+    
+    /* Desserts */
+    .dessert-item-card {
+        position: relative;
+    }
+    
+    .add-cart-btn-container {
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .dessert-image {
+        border-radius: 15px;
+    }
+    
+    .add-cart-btn {
+        border-radius: 25px;
+        padding: 8px 25px 8px 25px;
+        font-weight: 600;
+        font-size: 16px;
+
+        width: 170px;
+        height: 45px;
+    }
+
+    .quantityContainer {
+        border-radius: 25px;
+        padding: 8px 25px 8px 25px;
+        font-weight: 600;
+        font-size: 16px;
+
+        width: 170px;
+        height: 45px;
+    }
+    
+    .dessert-details {
+        margin: 0px;
+    }
+    
+    .food-type {
+        font-weight: 400;
+        margin-top: 40px;
+        font-size: 16px;
+    }
+    
+    .food-name {
+        font-weight: 700;
+        font-size: 17px;
+        font-size: 16px;
+    }
+    
+    .food-price {
+        font-weight: 600;
+        font-size: 17px;
+        font-size: 16px;
+    }
+    
+    .add-cart-btn-container {
+        margin-bottom: 20px;
+    
+    }
+    
+    /* Cart - sidebar */
+    .card-body {
+        padding: 30px;
+    }
+
+    .cart-section-card {
+        border: none;
+        margin-top: 100px;
+    }
+    
+    #empty-cart-image {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    
+    #empty-cart-text {
+        font-weight: 600;
+        font-size: 16px;
+    }
+    
+    .cart-main-title {
+        font-weight: 700;
+        font-size: 22px;
+    }
+
+    .cart-name {
+        font-size: 20px;
+    }
+    
+    .cart-quantity {
+        font-size: 18px;
+    }
+    
+    .cart-price {
+        font-size: 16px;
+    }
+    
+    .cart-subtotal {
+        font-size: 18px;
+    }
+    
+    #confirm-order-btn {
+        border-radius: 25px;
+        display: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 18px;
+    }
+
+    #btn-start-new-order {
+        margin-top: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 18px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .cart-name {
+        font-size: 17px;
+    }
+    
+    .cart-quantity {
+        font-size: 16px;
+    }
+    
+    .cart-price {
+        font-size: 16px;
+    }
+    
+    .cart-subtotal {
+        font-size: 16px;
+    }
+
+    #order-total-section {
+        display: none;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    
+    #orders-total-text {
+        font-size: 18px;
+    }
+    #orders-total-amount {
+        font-size: 30px;
+    }
+    
+    #confirm-order-btn {
+        border-radius: 25px;
+        display: none;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 17px;
+    }
+
+    #btn-start-new-order {
+        margin-top: 20px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 17px;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    
+}
